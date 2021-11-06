@@ -125,7 +125,7 @@ height: 500px;
 
 /* FOOTER */
 .footer{
-    height: 150px;
+    height: 100px;
     background-color: black;
     color: white;
     display: flex;
@@ -142,4 +142,53 @@ height: 500px;
 h4{
     margin: 50px;
     padding: 0;
+}
+
+/* LOGIN */
+
+
+.banner_login{
+    height: 500px;
+    color:white;
+    background-image: url("https://images.pexels.com/photos/2191013/pexels-photo-2191013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;  
+    display: flex;  
+    justify-content: center;
+    
+}
+
+.container_login{
+    width: 35%;
+    height: 400px;
+    background-color: #70809090;
+    margin-inline: 30%;
+    padding-block: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.container_login .box_login{
+height: 70%;
+width: 60%;
+margin:auto;
+text-align: center;
+background-color: white;
+border-radius: 20px ;
+color: rgb(0, 0, 0);
+}
+
+.container_login .box_login input{
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.container_login .box_login button{
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
 }
