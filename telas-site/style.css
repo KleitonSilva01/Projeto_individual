@@ -1,3 +1,7 @@
+header{
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,20 +16,20 @@ body {
 }
 
 .logo {
-    width: 25vh;
+   
+    width: 10vw;
     cursor: pointer;
     background-color: black;
-    object-fit: cover;
-    height: 70px;
-    
+    object-fit: cover;    
     margin: 20px;
     object-fit: cover;
 }
 
 .Navbar {
+    height: 13vh;
     list-style: none;
     display: flex;
-    width: 600px;
+    width: 60vw;
     justify-content: space-evenly;
     align-items: center;
     color:black
@@ -162,33 +166,157 @@ h4{
 
 .container_login{
     width: 35%;
-    height: 400px;
+    height: 300px;
     background-color: #70809090;
     margin-inline: 30%;
     padding-block: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: 10px;
     align-items: center;
+    flex-direction: column;
 }
 
 .container_login .box_login{
-height: 70%;
-width: 60%;
-margin:auto;
-text-align: center;
-background-color: white;
-border-radius: 20px ;
-color: rgb(0, 0, 0);
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container_login .box_login input{
+.container_login  form {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_login  input{
     margin: 15px;
-    border-radius: 15px;
+    border-radius: 24px;
+    border:2px solid #3498db;
+    text-align: center;
+    outline: none;
+    transition: 0.25s;
+   
+
 }
 
-.container_login .box_login button{
+.container_login  button{
+    margin: 15px;
+    border-radius: 24px;
+    border:2px solid #3498db;
+    text-align: center;
+    outline: none;
+    transition: 0.25s;
+    cursor: pointer;
     padding: 15px;
-    margin: 10px;
-    border-radius: 15px;
+}
+
+.container_login  input:hover{
+    background-color: #3498db;
+}
+
+.container_login  input:before{
+    content: "";
+    background: #000;
+    margin-top:-20px;
+}
+
+/* Cadastro */
+
+.banner_cadastro{
+    height: 700px;
+    color:white;
+    background-image: url("https://images.pexels.com/photos/2191013/pexels-photo-2191013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;  
+    display: flex;  
+    justify-content: center;
+}
+
+
+.container_cadastro {
+    width: 35%;
+    height: 500px;
+    background-color: #70809090;
+    margin-inline: 30%;
+    padding-block: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+   
+    
+}
+
+
+.container_cadastro form {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container_cadastro h1{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.container_cadastro  button{
+    margin: 25px;
+    border-radius: 14px;
+    border:2px solid #3498db;
+    text-align: center;
+    outline: none;
+    transition: 0.25s;
+    cursor: pointer;
+    padding: 25px;
+    display: flex;
+    align-items: stretch;
+
+}
+
+/* banner HOME */
+
+.banner_home {
+height: 100%;
+height: 100%;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.banner_home video{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    
+}
+
+.banner_home .conteudo{
+    position: relative;
+    z-index: 6;
+    max-width: 100px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.conteudo h1{
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+
+
 }
