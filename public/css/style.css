@@ -326,16 +326,52 @@ h4{
     margin: 0 auto;
     text-align: center;
     justify-content: space-between;
+    
+}
+
+.div_container_home{
+    height: 100%;
+    width: 60vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 6;
+
+}
+.div_container_home p {
+    margin-left: 20px;
+    font-size: 20px;
+    color: silver;
+    
+}
+
+.div_container_home h1{
+    margin-left: 20px;
+    color: silver;
+    
+}
+
+.div_container_2{
+    height: 100%;
+    width: 40vw;
+    display: flex;
+    align-items: end;
+    justify-content:center;
+    z-index: 6;
+    color: silver;
+
+
 }
 
 
+
 .banner_home {
-background-color: black;
-height: 79vh;
+background-color: white;
+height: 80.7vh;
+width: 100%;
 overflow: hidden;
 display: flex;
-justify-content: center;
-align-items: center;
 
 }
 
@@ -346,22 +382,9 @@ align-items: center;
     left: 0;
     object-fit: cover;
     position: absolute;
-    
 }
 
-.banner_home .conteudo{
-    position: relative;
-    z-index: 6;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    margin-top: 50vh;
-    color: #cedbda;
-
-}
-
-.conteudo a{
+.div_container_2 a{
 padding: 10px;
 border-radius: 5px;
 background-color: rgb(59, 59, 59);
@@ -370,7 +393,7 @@ text-decoration: none;
 
 }
 
-.conteudo a:hover {
+.div_container_2 a:hover {
     padding: 15px;
     transition-duration: 10s;
     background-color: black;

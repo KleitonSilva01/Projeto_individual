@@ -32,22 +32,29 @@
     </div>
 
     <div class="banner_home">
+        <div class="div_container_home">
+            
+            <P>Olá <span id="id_usuario"></span>, Explore as playlists.</P>
+            <div style="height: 30%; width: 100%;"></div>
+            <h1>A musica tem o poder de trazer sentimentos e lembranças...</h1>
+        </div>
+        
+        <div class="div_container_2">
+            <h1>comece agora essa nova experiência <p><a href="playlist.html"> Começar</a></p> </h1>
+        </div>
+        
         <video autoplay ="true" muted loop>
             <source src="./video/Pexels Videos 2795733.mp4" type="video/mp4">
-      </video>
-      <div class="conteudo">
-
-          <div class="texto1">
-              <h1>
-                A musica tem o poder de trazer sentimentos e lembranças...</h1>
-          </div>
-          <div class="texto2">
-              <h1>comece agora essa nova experiência <p><a href="playlist.html"> Começar</a></p> </h1>
-          </div>
-      </div>
+        </video>
+    </div>
     </div>
 
 </body>
 </html>
+
+<script>
+      id_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+</script>
 
 
