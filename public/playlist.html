@@ -134,8 +134,37 @@
         }
 
     }
+</script>
 
-    function enviar() {
-        
+<script>
+    
+    
+        function enviar() {
+            
+        var idUsuario = sessionStorage.ID_USUARIO
+        fetch(`/categoria/cadastrar/${categoria}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: null
+
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "/playlist.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
     }
+
 </script>

@@ -63,9 +63,8 @@ function cadastrar(req, res) {
     var nome = req.body.nome;
     var email = req.body.email;
     var senha = req.body.senha;
-    var telefone = req.body.telefone;
+    
 
-    console.log("telefone que chegou novo: " + telefone);
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
