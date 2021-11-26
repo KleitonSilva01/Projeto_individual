@@ -18,3 +18,12 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 ); 
 
+
+create table Votos (
+idvoto int primary key auto_increment,
+categoria varchar(45),
+fk_usuario int,
+FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+)auto_increment = 100;
+
+select * from usuario;

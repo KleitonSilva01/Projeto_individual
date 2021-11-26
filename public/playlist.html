@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Comece sua nova experiência</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <div class="header">
         <div class="container_home">
@@ -16,7 +18,7 @@
                     <a href="Home.html">Home</a>
                 </li>
                 </li>
-                <li>  
+                <li>
                     <a href="graficos.html"> Top playlist </a>
                 </li>
                 <li>
@@ -30,17 +32,110 @@
         </div>
     </div>
 
-    <div class = "container_play">
+    <div class="container_play">
         <div class="banner_playlist">
-            <div class="box_1">
- <img src="./img/emoçao-feliz.jpeg" alt="Emoção-feliz" button onclick="div_musica()" id="meu_botao" > 
+            <div class="box">
+                Selecione a categoria que quer ouvir <br>  <select id="lista_play" onchange="musicas()">
+
+                    <option value=""> Selecione
+
+                    </option>
+
+                    <option value="play_felicidade"> Músicas felizes
+                        <img id="felicidade" src="./img/Musica-feliz.jpg">
+                    </option>
+
+                    <option value="play_sofrencia"> Músicas para sofrer
+
+
+                    </option>
+                    <option value="play_animada"> Músicas animadas
+
+                    </option>
+                    <option value="play_paz"> Músicas para relaxar
+
+                    </option>
+
+                </select>
             </div>
+            <div class="display_video">
+
+                <div class="display">
+                    <div class=imagem>
+                        <img style= "display:none"id="imagem_play" src="">
+                    </div>
+                </div>
+
+                <div class="videos_youtube">
+                    <video style="display:none" id="videos" width="320" height="240" controls>
+                        <source type="video/mp4" src="">
+                    </video>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="votacao">
+        <div class="box_votacao">
+            Selecione sua categoria favorita
+            <select id="lista_votacao">
+                <option value="">Selecione</option>
+                <option value="felicidade">Felicidade</option>
+                <option value="sofrencia">Sofrência</option>
+                <option value="animada">Animada</option>
+                <option value="relaxar">Relaxar</option>
+            </select>
+            <br><br><br>
+            <button onclick="enviar()">Enviar categoria favorita</button>
         </div>
     </div>
 
 </body>
+
 </html>
 
 <script>
- 
+    function musicas() {
+        var lista_playlist = lista_play.value;
+        if (lista_playlist == "") {
+            videos.style.display = "none"
+            imagem_play.src = "";
+            videos.src = ""
+        } else if (lista_playlist == "play_felicidade") {
+
+            videos.style.display = "block"; 
+            imagem_play.style.display = "block"
+
+            imagem_play.src = "./img/Musica-feliz.jpg";
+            videos.src = "./video/video-01.mp4"
+        } else if (lista_playlist == "play_sofrencia") {
+
+            videos.style.display = "block"
+            imagem_play.style.display = "block"
+
+            imagem_play.src = "./img/sofrencia.jpg";
+            videos.src = "./video/videoplayback (2).mp4"
+        } else if (lista_playlist == "play_paz") {
+
+            videos.style.display = "block"
+            imagem_play.style.display = "block"
+
+            imagem_play.src = "./img/paz.JFIF";
+            videos.src = "./video/videoplayback (3).mp4"
+        } else if (lista_playlist == "play_animada") {
+
+            videos.style.display = "block"
+            imagem_play.style.display = "block"
+
+            imagem_play.src = "./img/animada.jpg";
+            videos.src = "./video/videoplayback (4).mp4"
+        }
+
+    }
+
+    function enviar() {
+        
+    }
 </script>
