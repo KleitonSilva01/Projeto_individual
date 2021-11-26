@@ -406,12 +406,22 @@ h4 {
 
 /* TOP PLAYLIST - GRAFICOS*/
 
-.banner_play {
+.banner_grafico {
   height: 80vh;
-  background-image: url('https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-image: url('https://images.pexels.com/photos/6966/abstract-music-rock-bw.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.banner_grafico .graph {
+  height: 50vh;
+  width: 70vw;
+  background-color: rgb(70, 66, 66);
+}
+
 
 /* PLAYLIST */
 .banner_playlist {

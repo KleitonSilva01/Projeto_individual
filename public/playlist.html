@@ -82,10 +82,10 @@
             Selecione sua categoria favorita
             <select id="lista_votacao">
                 <option value="">Selecione</option>
-                <option value="felicidade">Felicidade</option>
-                <option value="sofrencia">Sofrência</option>
-                <option value="animada">Animada</option>
-                <option value="relaxar">Relaxar</option>
+                <option name="opt" value="100">Felicidade</option>
+                <option name="opt" value="101">Sofrência</option>
+                <option name="opt" value="102">Animada</option>
+                <option name="opt" value="103">Relaxar</option>
             </select>
             <br><br><br>
             <button onclick="enviar()">Enviar categoria favorita</button>
@@ -141,7 +141,9 @@
     
         function enviar() {
             
-        var idUsuario = sessionStorage.ID_USUARIO
+        var idUsuario = sessionStorage.ID_USUARIO;
+        var categoria = lista_votacao.value;
+
         fetch(`/categoria/cadastrar/${categoria}`, {
             method: "POST",
             headers: {
