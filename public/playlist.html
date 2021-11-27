@@ -77,10 +77,10 @@
         <div class="box_votacao">
             Selecione sua categoria favorita
             <select id="lista_votacao">
-                <option value="">Selecione</option>
-                <option name="opt" value="101">Sofrência</option>
-                <option name="opt" value="102">Animada</option>
-                <option name="opt" value="103">Relaxar</option>
+                <option value="selecione">Selecione</option>
+                <option name="opt" value="100">Sofrência</option>
+                <option name="opt" value="101">Animada</option>
+                <option name="opt" value="102">Relaxar</option>
             </select>
             <br><br><br>
             <button onclick="enviar()">Enviar categoria favorita</button>
@@ -94,7 +94,7 @@
 <script>
     function musicas() {
         var lista_playlist = lista_play.value;
-        if (lista_playlist == "") {
+        if (lista_playlist == "selecione") {
             video.style.display = "none"
             imagem_play.src = "";
             video.src = ""
