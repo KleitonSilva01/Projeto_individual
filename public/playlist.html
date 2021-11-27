@@ -35,7 +35,7 @@
     <div class="container_play">
         <div class="banner_playlist">
             <div class="box">
-                Selecione a categoria que quer ouvir <br>  <select id="lista_play" onchange="musicas()">
+                Selecione a categoria que quer ouvir <br> <select id="lista_play" onchange="musicas()">
 
                     <option value=""> Selecione
 
@@ -59,13 +59,16 @@
 
                 <div class="display">
                     <div class=imagem>
-                        <img style= "display:none"id="imagem_play" src="">
+                        <img style="display:none" id="imagem_play" src="">
                     </div>
                 </div>
 
                 <div class="videos_youtube">
-                    <iframe id="video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  style="display: none;"></iframe>    
-                    
+                    <button id="button_1" style="display: none" onclick="passar_pro_lado_1()"> ◀ </button>
+                    <iframe id="video" width="560" height="315" src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="display: none;"></iframe>
+                    <button id="button" style="display: none" onclick="passar_pro_lado_2()"> ▶ </button>
                 </div>
 
             </div>
@@ -95,41 +98,128 @@
     function musicas() {
         var lista_playlist = lista_play.value;
         if (lista_playlist == "selecione") {
-            video.style.display = "none"
+
+            video.style.display = "none";
+            button_1.style.display = "none";
+            button.style.display = "none";
             imagem_play.src = "";
             video.src = ""
-        }  else if (lista_playlist == "play_sofrencia") {
+        } else if (lista_playlist == "play_sofrencia") {
 
-            video.style.display = "block"
-            imagem_play.style.display = "block"
+            video.style.display = "block";
+            imagem_play.style.display = "block";
+            button.style.display = "block";
+            button_1.style.display = "block";
 
             imagem_play.src = "./img/sofrencia.jpg";
             video.src = "https://www.youtube.com/embed/H1DEczvTjgE"
 
         } else if (lista_playlist == "play_paz") {
 
-            video.style.display = "block"
-            imagem_play.style.display = "block"
+            video.style.display = "block";
+            imagem_play.style.display = "block";
+            button.style.display = "block";
+            button_1.style.display = "block";
 
             imagem_play.src = "./img/paz.JFIF";
             video.src = "https://www.youtube.com/embed/6cNTT-K6PZQ"
         } else if (lista_playlist == "play_animada") {
 
-            video.style.display = "block"
-            imagem_play.style.display = "block"
+            video.style.display = "block";
+            imagem_play.style.display = "block";
+            button.style.display = "block";
+            button_1.style.display = "block";
 
             imagem_play.src = "./img/animada.jpg";
             video.src = "https://www.youtube.com/embed/d3KaQ-KvQUQ"
         }
 
     }
+
+    function passar_pro_lado_2() {
+        var lista_playlist = lista_play.value;
+
+
+        if (lista_playlist = "play_sofrencia" && video.src == "https://www.youtube.com/embed/H1DEczvTjgE") {
+
+            video.src = "https://www.youtube.com/embed/WkYqQctOi9g";
+
+        } else if (video.src == "https://www.youtube.com/embed/WkYqQctOi9g") {
+            video.src = "https://www.youtube.com/embed/ftcf_bIZqvA";
+
+        } else if (video.src == "https://www.youtube.com/embed/ftcf_bIZqvA") {
+            video.src = "https://www.youtube.com/embed/H1DEczvTjgE";
+
+        }
+
+        if (lista_playlist = "play_animada" && video.src == "https://www.youtube.com/embed/d3KaQ-KvQUQ") {
+
+            video.src = "https://www.youtube.com/embed/-OH3w0YkQFo";
+
+        } else if (video.src == "https://www.youtube.com/embed/-OH3w0YkQFo") {
+            video.src = "https://www.youtube.com/embed/XFm-sl_i1KI";
+
+        } else if (video.src == "https://www.youtube.com/embed/XFm-sl_i1KI") {
+            video.src = "https://www.youtube.com/embed/d3KaQ-KvQUQ";
+        }
+
+        if (lista_playlist = "play_paz" && video.src == "https://www.youtube.com/embed/6cNTT-K6PZQ") {
+
+            video.src = "https://www.youtube.com/embed/y4XREoGwLnw";
+
+        } else if (video.src == "https://www.youtube.com/embed/y4XREoGwLnw") {
+            video.src = "https://www.youtube.com/embed/AJcXyCC5EUM";
+
+        } else if (video.src == "https://www.youtube.com/embed/AJcXyCC5EUM") {
+            video.src = "https://www.youtube.com/embed/6cNTT-K6PZQ";
+        }
+    }
+
+    function passar_pro_lado_1() {
+        var lista_playlist = lista_play.value;
+
+
+        if (lista_playlist = "play_sofrencia" && video.src == "https://www.youtube.com/embed/ftcf_bIZqvA") {
+
+            video.src = "https://www.youtube.com/embed/WkYqQctOi9g";
+
+        } else if (video.src == "https://www.youtube.com/embed/WkYqQctOi9g") {
+            video.src = "https://www.youtube.com/embed/H1DEczvTjgE";
+
+        } else if (video.src == "https://www.youtube.com/embed/H1DEczvTjgE") {
+            video.src = "https://www.youtube.com/embed/ftcf_bIZqvA";
+        }
+
+
+        if (lista_playlist = "play_animada" && video.src == "https://www.youtube.com/embed/XFm-sl_i1KI") {
+
+            video.src = "https://www.youtube.com/embed/-OH3w0YkQFo";
+
+        } else if (video.src == "https://www.youtube.com/embed/-OH3w0YkQFo") {
+            video.src = "https://www.youtube.com/embed/d3KaQ-KvQUQ";
+
+        } else if (video.src == "https://www.youtube.com/embed/d3KaQ-KvQUQ") {
+            video.src = "https://www.youtube.com/embed/XFm-sl_i1KI";
+        }
+
+        if (lista_playlist = "play_paz" && video.src == "https://www.youtube.com/embed/AJcXyCC5EUM") {
+
+            video.src = "https://www.youtube.com/embed/y4XREoGwLnw";
+
+        } else if (video.src == "https://www.youtube.com/embed/y4XREoGwLnw") {
+            video.src = "https://www.youtube.com/embed/6cNTT-K6PZQ";
+
+        } else if (video.src == "https://www.youtube.com/embed/6cNTT-K6PZQ") {
+            video.src = "https://www.youtube.com/embed/AJcXyCC5EUM";
+        }
+    }
 </script>
 
 <script>
-    
-    
-        function enviar() {
-            
+
+
+    function enviar() {
+
         var idUsuario = sessionStorage.ID_USUARIO;
         var categoria = lista_votacao.value;
 
