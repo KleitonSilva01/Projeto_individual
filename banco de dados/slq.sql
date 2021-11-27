@@ -1,5 +1,7 @@
 create database Feelings_Music;
 
+
+
 use Feelings_Music;
 
 
@@ -18,12 +20,28 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 ); 
 
-CREATE table votos (
-	idvoto int PRIMARY key AUTO_INCREMENT,
-	categoria varchar (45),
-	fk_usuario int, 
-	FOREIGN key (fk_usuario) REFERENCES usuario(id)
-) 
 
-select * from usuario;
+create table categoria (
+idcategoria int primary key auto_increment,
+categoria varchar(45)
+)auto_increment = 100;
 
+create table votos (
+idvoto int primary key auto_increment,
+fk_categoria int,
+foreign key (fk_categoria) references categoria(idcategoria)
+);
+
+insert into categoria values 
+(null, 'Felicidade'),
+(null, 'Sofrencia'),
+(null, 'Animada'),
+(null, 'Relaxar');
+
+
+select * from votos;
+
+select * from categoria join votos on fk_categoria = idcategoria;
+
+select count(fk_categoria) as 'Quantidade de votos', categoria from votos join categoria on fk_categoria = idcategoria 
+group by fk_categoria;

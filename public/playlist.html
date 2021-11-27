@@ -41,9 +41,6 @@
 
                     </option>
 
-                    <option value="play_felicidade"> Músicas felizes
-                        <img id="felicidade" src="./img/Musica-feliz.jpg">
-                    </option>
 
                     <option value="play_sofrencia"> Músicas para sofrer
 
@@ -67,9 +64,8 @@
                 </div>
 
                 <div class="videos_youtube">
-                    <video style="display:none" id="videos" width="320" height="240" controls>
-                        <source type="video/mp4" src="">
-                    </video>
+                    <iframe id="video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  style="display: none;"></iframe>    
+                    
                 </div>
 
             </div>
@@ -82,7 +78,6 @@
             Selecione sua categoria favorita
             <select id="lista_votacao">
                 <option value="">Selecione</option>
-                <option name="opt" value="100">Felicidade</option>
                 <option name="opt" value="101">Sofrência</option>
                 <option name="opt" value="102">Animada</option>
                 <option name="opt" value="103">Relaxar</option>
@@ -100,37 +95,31 @@
     function musicas() {
         var lista_playlist = lista_play.value;
         if (lista_playlist == "") {
-            videos.style.display = "none"
+            video.style.display = "none"
             imagem_play.src = "";
-            videos.src = ""
-        } else if (lista_playlist == "play_felicidade") {
+            video.src = ""
+        }  else if (lista_playlist == "play_sofrencia") {
 
-            videos.style.display = "block"; 
-            imagem_play.style.display = "block"
-
-            imagem_play.src = "./img/Musica-feliz.jpg";
-            videos.src = "./video/video-01.mp4"
-        } else if (lista_playlist == "play_sofrencia") {
-
-            videos.style.display = "block"
+            video.style.display = "block"
             imagem_play.style.display = "block"
 
             imagem_play.src = "./img/sofrencia.jpg";
-            videos.src = "./video/videoplayback (2).mp4"
+            video.src = "https://www.youtube.com/embed/H1DEczvTjgE"
+
         } else if (lista_playlist == "play_paz") {
 
-            videos.style.display = "block"
+            video.style.display = "block"
             imagem_play.style.display = "block"
 
             imagem_play.src = "./img/paz.JFIF";
-            videos.src = "./video/videoplayback (3).mp4"
+            video.src = "https://www.youtube.com/embed/6cNTT-K6PZQ"
         } else if (lista_playlist == "play_animada") {
 
-            videos.style.display = "block"
+            video.style.display = "block"
             imagem_play.style.display = "block"
 
             imagem_play.src = "./img/animada.jpg";
-            videos.src = "./video/videoplayback (4).mp4"
+            video.src = "https://www.youtube.com/embed/d3KaQ-KvQUQ"
         }
 
     }
@@ -156,12 +145,12 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                window.alert("Cadastro realizado com sucesso!");
+                window.alert("Curtida realizado com sucesso!");
                 window.location = "/playlist.html";
                 limparFormulario();
                 finalizarAguardar();
             } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
+                throw ("Houve um erro ao tentar realizar a curtida!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
