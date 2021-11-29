@@ -311,15 +311,22 @@ h4 {
   flex-direction: column;
   z-index: 6;
 }
-.div_container_home p {
+.div_container_home p  {
   margin-left: 20px;
   font-size: 20px;
-  color: white;
+  color:rgb(248, 247, 248);
+  background-color: #3b3c3d90;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+
+
 }
 
 .div_container_home h1 {
   margin-left: 20px;
-  color: white;
+color:  rgb(248, 246, 248) ;
+
 }
 
 .div_container_2 {
@@ -329,8 +336,22 @@ h4 {
   align-items: end;
   justify-content: center;
   z-index: 6;
-  color: white;
+  color: rgb(244, 244, 248);
+  padding: 10px;
+  
 }
+  .div_container_2 h1{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border-radius: 10px;
+    padding: 10px;
+    
+  }
+  
+  
+
 
 .banner_home {
   background-color: white;
@@ -352,15 +373,15 @@ h4 {
 .div_container_2 a {
   padding: 10px;
   border-radius: 5px;
-  background-color: rgb(59, 59, 59);
-  color: white;
+  background-color: rgb(210, 85, 214);;
+  color: black;
   text-decoration: none;
 }
 
 .div_container_2 a:hover {
   padding: 15px;
   transition-duration: 10s;
-  background-color: black;
+  background: linear-gradient(72deg, rgb(210, 85, 214) 50%, rgb(61, 61, 207) 99%);
   cursor: pointer;
   transition: 0.5s;
 }
@@ -408,7 +429,7 @@ h4 {
 
 .banner_grafico {
   height: 80vh;
-  background-image: url('https://images.pexels.com/photos/6966/abstract-music-rock-bw.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: url('https://images.pexels.com/photos/341858/pexels-photo-341858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -419,7 +440,7 @@ h4 {
 .banner_grafico .graph {
   height: 50vh;
   width: 70vw;
-  background-color: rgb(255, 245, 245);
+  background-color: rgb(241, 210, 241);
 }
 
 
@@ -454,14 +475,14 @@ h4 {
 .banner_playlist .box select {
   margin: 15px;
   border-radius: 10px;
-  background-color: rgb(245, 243, 243);
+  background-color: rgb(187, 91, 187);
   padding: 10px;
 }
 
 .banner_playlist .box select:hover {
   transition: 0.9s;
-  background-color: black;
-  color: white;
+  background:linear-gradient(72deg, rgb(210, 85, 214) 50%, rgb(61, 61, 207) 99%);
+  
 }
 
 .display_video .display {
@@ -522,7 +543,7 @@ h4 {
 .votacao .box_votacao {
   background-color: #15161599;
   height: 200px;
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -533,36 +554,35 @@ h4 {
 .votacao .box_votacao select {
   margin: 15px;
   border-radius: 10px;
-  background-color: rgb(240, 234, 234);
+  background-color: rgb(210, 85, 214);
   color: rgb(22, 21, 21);
   padding: 10px;
 }
 
 .votacao .box_votacao select:hover {
   transition: 0.9s;
-  background-color: rgb(14, 13, 13);
-  color: rgb(233, 224, 224);
+  background:linear-gradient(72deg, rgb(210, 85, 214) 50%, rgb(61, 61, 207) 99%);
 }
 
 .votacao .box_votacao button {
   border-radius: 10px;
-  background-color: rgb(245, 240, 240);
+  background-color: rgb(210, 85, 214);
   color: black;
   padding: 10px;
 }
 
 .votacao .box_votacao button:hover {
   transition: 0.9s;
-  background-color: rgb(20, 20, 20);
-  color: rgb(255, 255, 255);
+  background:linear-gradient(72deg, rgb(210, 85, 214) 50%, rgb(61, 61, 207) 99%) ;
+  
   padding: 15px;
 }
 
 /* MURAL - COMENTARIOS */
 
 .dash-right {
-  height: 500px;
-  background-image: url('https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  height: 110vh;
+  background-image: url('https://images.pexels.com/photos/341858/pexels-photo-341858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
