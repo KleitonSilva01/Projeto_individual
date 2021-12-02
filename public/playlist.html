@@ -220,10 +220,10 @@
 
     function enviar() {
 
-        var idUsuario = sessionStorage.ID_USUARIO;
+        var id = sessionStorage.ID_USUARIO;
         var categoria = lista_votacao.value;
 
-        fetch(`/categoria/cadastrar/${categoria}`, {
+        fetch(`/categoria/cadastrar/${categoria}/${id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body onload="obterDadosGrafico()">
+<body onload="obterDadosGrafico(),obterDadosId()">
     <div class="header">
         <div class="container_home">
             <a href="index.html"> <img src="./img/Feelings.png" class="logo_home"></a>
@@ -35,8 +35,15 @@
 
 <div class="banner_grafico">
     <div class="graph">
-        <canvas id="myChart" style="width: 100%; height: 50vh"></canvas>
-      </div>
+        <canvas id="myChart" ></canvas> 
+    </div>
+</div>
+<div class="segundo_grafico">
+
+    <div class="graph_2">
+        <canvas id="myChart_2" ></canvas>
+    </div>
+
 </div>
 
 </body>
@@ -83,7 +90,7 @@ function obterDadosGrafico() {
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             dados.labels.push(registro.categoria);
-            dados.datasets[0].data.push(registro.QuantidadeVotos);
+            dados.datasets[0].data.push(registro.Quantidadedevotos);
         }
 
         console.log(JSON.stringify(dados));
@@ -107,4 +114,73 @@ function obterDadosGrafico() {
             }
         })
     }
+
+
+
+
+
+    function obterDadosId() {
+
+        var id = sessionStorage.ID_USUARIO;
+
+fetch(`categoria/${id}`, { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+        response.json().then(function (resposta) {
+            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+            resposta.reverse();
+
+            plotarGraficoId(resposta);
+        });
+    } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+    }
+})
+.catch(function (error) {
+    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+});
+}
+
+// só altere aqui se souber o que está fazendo!
+function plotarGraficoId(resposta) {
+console.log('iniciando plotagem do gráfico...');
+
+var dados = {
+    labels: [],
+    datasets: [
+        {
+            label: 'Categorias mais curtidas pelo usuario',
+            backgroundColor: '#3CE57C',
+            fill: true,
+            data: []
+        },
+    ]
+};
+
+for (i = 0; i < resposta.length; i++) {
+    var registro = resposta[i];
+    dados.labels.push(registro.categoria);
+    dados.datasets[0].data.push(registro.Quantidadedevotos);
+}
+
+console.log(JSON.stringify(dados));
+
+var ctx = document.getElementById("myChart_2");
+
+const grafico_barra = new Chart(ctx, {
+    type: 'bar',
+    data: dados,
+    
+    options: {
+        scales: {
+            yAxes:  {
+            ticks: {
+                fontColor:"#ffffff"
+            },
+                display: false, 
+                    beginAtZero: true,   
+            },
+        }
+    }
+})
+}
 </script>

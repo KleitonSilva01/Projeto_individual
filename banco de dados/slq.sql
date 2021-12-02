@@ -1,6 +1,6 @@
 create database Feelings_Music;
 
-
+drop database Feelings_Music;
 
 use Feelings_Music;
 
@@ -29,6 +29,8 @@ categoria varchar(45)
 create table votos (
 idvoto int primary key auto_increment,
 fk_categoria int,
+fk_usuario int,
+foreign key (fk_usuario) references usuario(id),
 foreign key (fk_categoria) references categoria(idcategoria)
 );
 
@@ -41,7 +43,7 @@ insert into categoria values
 
 select * from votos;
 
-select * from categoria join votos on fk_categoria = idcategoria;
+select * from categoria join votos on fk_categoria = idcategoria join usuario on fk_usuario = id;
 
 select count(fk_categoria) as 'Quantidade de votos', categoria from votos join categoria on fk_categoria = idcategoria 
 group by fk_categoria;
