@@ -423,13 +423,14 @@ h4 {
 /* TOP PLAYLIST - GRAFICOS*/
 
 .banner_grafico {
-  height: 100vh;
+  height: 200vh;
   background-image: url('https://images.pexels.com/photos/341858/pexels-photo-341858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .banner_grafico .graph {
@@ -439,11 +440,21 @@ h4 {
 }
 
 .segundo_grafico {
-  background-color: red;
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/341858/pexels-photo-341858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+
 .segundo_grafico .graph_2 {
-  height: 30%;
+  height: 80%;
+  width: 60%;
+  background-color: rgb(241, 210, 241);
+  margin-top: 10px;
 }
 
 /* PLAYLIST */

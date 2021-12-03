@@ -1,6 +1,6 @@
 create database Feelings_Music;
 
-drop database Feelings_Music;
+
 
 use Feelings_Music;
 
@@ -35,7 +35,6 @@ foreign key (fk_categoria) references categoria(idcategoria)
 );
 
 insert into categoria values 
-(null, 'Felicidade'),
 (null, 'Sofrencia'),
 (null, 'Animada'),
 (null, 'Relaxar');
