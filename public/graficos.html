@@ -36,9 +36,9 @@
 <div class="banner_grafico">
     <div class="graph">
         <canvas id="myChart" ></canvas> 
-        <div class="graph_2">
-            <canvas id="myChart_2" ></canvas>
-        </div>
+    </div>
+    <div class="graph_2">
+        <canvas id="myChart_2" ></canvas>
     </div>
 </div>
 
@@ -75,7 +75,7 @@ function obterDadosGrafico() {
             labels: [],
             datasets: [
                 {
-                    label: 'Resultado dos votos',
+                    label: 'Resultado dos votos de todos os usuarios cadastrados',
                     backgroundColor: '#3CE57C',
                     fill: true,
                     data: []
@@ -101,7 +101,7 @@ function obterDadosGrafico() {
                 scales: {
                     yAxes:  {
                     ticks: {
-                        fontColor:"#ffffff"
+                        fontColor:"#00000"
                     },
                         display: false, 
                             beginAtZero: true,   
@@ -145,7 +145,7 @@ var dados = {
     datasets: [
         {
             label: 'Categorias mais curtidas pelo usuario',
-            backgroundColor: '#3CE57C',
+            backgroundColor: '#00BFFF"',
             fill: true,
             data: []
         },
@@ -170,7 +170,7 @@ const grafico_barra = new Chart(ctx, {
         scales: {
             yAxes:  {
             ticks: {
-                fontColor:"#ffffff"
+                fontColor:"#00BFFF"
             },
                 display: false, 
                     beginAtZero: true,   
