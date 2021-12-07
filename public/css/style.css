@@ -424,9 +424,7 @@ h4 {
 
 .banner_grafico {
   height: 100vh;
-  background-image: url('https://images.pexels.com/photos/341858/pexels-photo-341858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #2CEAEB ;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -436,7 +434,6 @@ h4 {
 .banner_grafico .graph {
   height: 50%;
   width: 50%;
-  background-color: rgb(241, 210, 241);
 }
 
 
@@ -444,7 +441,7 @@ h4 {
 .banner_grafico .graph_2 {
   height: 50%;
   width: 50%;
-  background-color: rgb(241, 210, 241);
+
   
 }
 
